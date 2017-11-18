@@ -23,7 +23,7 @@ class WeatherForm extends Component {
             placeholder="Enter city"
           />
           <br />
-          <button>Get Weather</button>
+          <button className="button expanded">Get Weather</button>
         </form>
       </div>
     )

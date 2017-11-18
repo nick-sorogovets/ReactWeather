@@ -34,7 +34,7 @@ class Weather extends Component {
     const renderMessage = () => {
       if (isLoading) {
         return (
-          <h3>Fething weather...</h3>
+          <h3 className="text-center">Fething weather...</h3>
         );
       } else if (temp && location) {
         return (
@@ -45,7 +45,7 @@ class Weather extends Component {
 
     return (
       <div>
-        <h3>Weather Component</h3>
+        <h1 className="text-center">Get Weather</h1>
         <WeatherForm onSearch={this.handleSearch} />
         {renderMessage()}
       </div>

@@ -4,8 +4,9 @@ const WeatherInfo = (props) => {
   const { location, temp } = props.info;
   return (
     <div>
-      <h3>Weather Info Component</h3>
-      <p>The temperature in {location} is {temp} cels</p>
+      <h3 className="text-center">
+        The temperature in {location} is {temp} cels
+      </h3>
     </div>
   );
 }

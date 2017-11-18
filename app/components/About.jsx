@@ -9,7 +9,7 @@ const About = (props) => (
     <p></p>
     <ul>
       <li>
-        <a href="https://facebook.gitbub.io/react">React</a>
+        <a href="https://facebook.gith`ub.io/react">React</a>
       </li>
       <li>
         <a href="http://openweathermap.org">Open Weather Map</a>
