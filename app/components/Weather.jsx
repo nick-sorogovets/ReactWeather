@@ -15,7 +15,10 @@ class Weather extends Component {
     this.setState({
       isLoading: true,
       errorMessage: undefined,
+      location: undefined,
+      temp: undefined,
     });
+
     OpenWeatherMap.getTemp(location)
       .then((temp) => {
         this.setState({
@@ -32,7 +35,23 @@ class Weather extends Component {
       });
   }
 
+  componentWillReceiveProps(newProps) {
+    const location = newProps.location.query.location;
 
+    if (location && location.length) {
+      this.handleSearch(location);
+      window.location.hash = '#/';
+    }
+  }
+
+  componentDidMount() {
+    const location = this.props.location.query.location;
+
+    if (location && location.length) {
+      this.handleSearch(location);
+      window.location.hash = '#/';
+    }
+  }
 
   render() {
     const {
@@ -55,9 +74,9 @@ class Weather extends Component {
     }
 
     const renderError = () => {
-      if( typeof errorMessage === 'string') {
+      if (typeof errorMessage === 'string') {
         return (
-          <ErrorModal message={errorMessage}/>
+          <ErrorModal message={errorMessage} />
         );
       }
     }
