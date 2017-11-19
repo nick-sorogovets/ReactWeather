@@ -12,7 +12,7 @@ import 'style!css!foundation-sites/dist/css/foundation.min.css';
 $(document).foundation();
 
 // App CSS
-import 'style!css!applicationStyles';
+import 'style!css!sass!applicationStyles';
 
 ReactDOM.render(
   <Router history={hashHistory}>
