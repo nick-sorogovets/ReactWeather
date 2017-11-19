@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = (props) => (
   <div>
-    <h1 className='text-center'>About Component</h1>
+    <h1 className='text-center page-title'>About Component</h1>
     <p>This is a weather application build on React.
      I have build this for The Compelete React Web App
       Developer Course.</p>
